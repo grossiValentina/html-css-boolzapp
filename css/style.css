@@ -1,15 +1,14 @@
-:root{
-    /*palette*/
-    --green: #009688;
-}
-
-
 /* RESET */
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+h4{
+    font-size: 15px;
+}
+
 img{
     max-width: 100%;
 }
@@ -22,16 +21,15 @@ img{
     position: relative;
 }
 
-
 /* CONTAINER */
 .container{
-    border: 1px solid black;
     width: 80%;
     height: calc(100% - 40px);
     margin: 0 auto;
     position: absolute;
     top: 20px;
     right: calc(20% / 2);
+    overflow: hidden;
 }
 .row{
     display: flex;
@@ -39,49 +37,166 @@ img{
 }
 .small-col{
     width: 30%;
-    background-color: aqua;
+    overflow-y: scroll;
 }
 .large-col{
     width: 70%;
     background-color: bisque;
 }
+
+/* SMALL COLUMN */
+/* row personal */
+.row-personal {
+    display: flex;
+    border-right: 1px solid #B1B1B1;
+    height: 65px;
+    justify-content: space-between;
+    padding: 5px;
+    align-items: center;
+    background-color: #EAEAEA;
+}
+.personal-photo img{
+    height: 40px;
+    border-radius: 50%;
+}
+.active-notific-img img{
+    height: 40px;
+    border-radius: 50%;
+}
+
+/* row notifications */
+.row-notifications{
+    display: flex;
+    height: 65px;
+    padding: 5px;
+    align-items: center;
+    background-color: #8EDAFC;
+}
+.active-notific-img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+.photo-profile img{
+    height: 40px;
+    border-radius: 50%;
+    align-items: center;
+}
+.row-input{
+    height: 30px;
+    text-align: center;
+    background-color: #EAEAEA;
+    display: flex;
+    padding: 3px;
+}
+.row-input input{
+    width: -webkit-fill-available;
+}
+
+/* conversations list */
+.row-friends{
+    display: flex;
+    height: 65px;
+    border-bottom: 2px solid #EAEAEA;
+    padding: 5px;
+    align-items: center;
+    background-color: #FFFFFF;
+}
+
+/* MEDIA QUERY TABLET small column */
+@media screen and (max-width: 768px){
+      .menu-icons{
+        display: none;
+      }
+      .row-friends p,h4,.access,a{
+        display: none;
+      }
+      .row-input{
+        display: none;
+      }
+      .row-personal {
+        justify-content: center;
+      }
+      .row-notifications{
+        justify-content: center;
+      }
+      .row-friends{
+        justify-content: center;
+      }
+}
+
+/* MEDIA QUERY MOBILE small column */
+@media screen and (max-width: 480px){
+    .small-col{
+        display: none;
+    }
+    .large-col{
+        width: 100%;
+    }
+    
+}
+
+    
+
+
+/* LARGE COLUMN */
+
+/* header column */
 .row-header-col-large{
     display: flex;
     justify-content: space-between;
-    background-color: lightcoral;
-    height: 40px;
+    background-color: #EAEAEA;
+    height: 65px;
+    padding: 5px;
+    align-items: center;
 }
+
+/* main column */
 .row-message{
     padding: 20px;
     overflow-y: scroll;
-    height: calc(100vh - 120px);
-    
+    height: calc(100vh - 170px);
+    background-image: url(/img/mine.jpg);
+
 }
 .message{
-    border: 1px solid green;
+    border-radius: 10px;
     max-width: 60%;
-    padding: 6px;
+    padding: 10px;
     margin-bottom: 24px;
 }
 
 .sent {
     margin-left: auto;
+    background-color: #D5F9BA;
+}
+.received{
+    background-color: #FFFFFF;
 }
 
 .second{
     flex-direction: row-reverse;
-
+    
 }
 
-footer {
+/* footer column */
+.row-footer {
     width: 100%;
-    height: 40px;
-    background-color: lightseagreen;
+    height: 65px;
+    background-color: #EAEAEA;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
 }
+
 
 /* MEDIA QUERY TABLET*/
 @media screen and (max-width: 768px ) {
     .message{ 
         max-width: 70%;
     }
+
 }
