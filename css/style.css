@@ -38,6 +38,7 @@ img{
 .small-col{
     width: 30%;
     overflow-y: scroll;
+    border-right: 1px solid #B1B1B1;
 }
 .large-col{
     width: 70%;
