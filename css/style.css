@@ -189,7 +189,7 @@ img{
         justify-content: center;
       }
       .col-friends{
-        height: calc(100vh - 160px ( + 30px));
+        height: calc(100vh - 160px  + 30px);
     }
     .row-friends:hover{
         background-color: var(--light-grey);
@@ -250,21 +250,13 @@ img{
     background-color: var(--green-color);
 }
 
-.sent .angle-down{
-    position: relative;
-    left: 95%;
-}
+
 .sent .hours {
     position: relative;
     left: 90%;
 }
 .received{
     background-color: var(--white);
-}
-.received .angle-down{
-     position: relative;
-     right: 90%;
-
 }
 
 /* footer column */
