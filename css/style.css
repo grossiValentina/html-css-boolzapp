@@ -257,9 +257,7 @@ img{
     display: flex;
     flex-direction: row-reverse;
 }
-.sent .angle:active{
-    transform: rotateZ(50%);
-}
+
 .sent .hour{
     display: flex;
     flex-direction: row-reverse;
@@ -269,12 +267,38 @@ img{
 .received .angle{
     display: flex;
     flex-direction: row-reverse;
+   
 }
 .received .hour{
     display: flex;
     flex-direction: row-reverse;
     font-size: 10px;
     color: var(--dark-grey);
+}
+.angle:active{
+    
+
+}
+/* list angle down */
+.angle-list{
+    list-style-type: none;
+    width: 40%;
+    position: relative;
+    left: 60%;
+    
+
+}
+.angle-list li{
+    padding: 5px;
+    background-color: var(--white);
+    background-color: var(--light-grey);
+    /* dispay none */
+}
+.angle-list li:first-child{
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: var(--green-color);
+    border: 0;
 }
 
 
