@@ -250,14 +250,33 @@ img{
     background-color: var(--green-color);
 }
 
-
-.sent .hours {
-    position: relative;
-    left: 90%;
-}
 .received{
     background-color: var(--white);
 }
+.sent .angle{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.sent .angle:active{
+    transform: rotateZ(50%);
+}
+.sent .hour{
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 10px;
+    color: var(--dark-grey);
+}
+.received .angle{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.received .hour{
+    display: flex;
+    flex-direction: row-reverse;
+    font-size: 10px;
+    color: var(--dark-grey);
+}
+
 
 /* footer column */
 .row-footer {
