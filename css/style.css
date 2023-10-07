@@ -248,10 +248,14 @@ img{
 .sent {
     margin-left: auto;
     background-color: var(--green-color);
+    position: relative;
+    padding: 15px;
 }
 
 .received{
     background-color: var(--white);
+    position: relative;
+    padding: 15px;
 }
 .sent .angle{
     display: flex;
@@ -267,7 +271,6 @@ img{
 .received .angle{
     display: flex;
     flex-direction: row-reverse;
-   
 }
 .received .hour{
     display: flex;
@@ -275,32 +278,58 @@ img{
     font-size: 10px;
     color: var(--dark-grey);
 }
-.angle:active{
-    
 
-}
-/* list angle down */
-.angle-list{
-    list-style-type: none;
+/* list angle down  (sent message)*/
+.sent .angle-list{
     width: 40%;
-    position: relative;
+    position: absolute;
+    top: 0;
     left: 60%;
-    
-
 }
+
 .angle-list li{
     padding: 5px;
-    background-color: var(--white);
-    background-color: var(--light-grey);
-    /* dispay none */
-}
+    list-style-type: none;
+} 
+
 .angle-list li:first-child{
     display: flex;
     flex-direction: row-reverse;
-    background-color: var(--green-color);
+    background-color: transparent;
     border: 0;
 }
+.angle-list i:focus{
+    transform: rotate(180deg);
+}
+.angle-list i:focus + .sub-menu{
+    display: none;
+}
 
+.angle-list i:focus + .sub-menu{
+    display: block;
+}
+.angle-list .sub-menu{
+    position: absolute;
+    display: none;
+    background-color: var(--white);
+    right: 0;
+    top: 100%;
+}
+
+/* list angle down (received message)*/
+.received .angle-list{
+    position: absolute;
+    width: 95%;
+    top: 0;
+}
+
+/* lista annidata hover*/
+.sub-menu .info-message:hover{
+    background-color: var(--light-grey);
+}
+.sub-menu .cancel-message:hover{
+    background-color: var(--light-grey);
+}
 
 /* footer column */
 .row-footer {
